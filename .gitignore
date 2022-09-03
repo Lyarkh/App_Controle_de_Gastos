@@ -1,5 +1,5 @@
 poetry.lock
 */__pycache__/
 */*/__pycache__/
-*/secret_tokens/
+*/secret_config.ini
 .vscode/
