@@ -37,11 +37,18 @@
     <pointsize>14</pointsize>
    </font>
   </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
   <property name="mouseTracking">
    <bool>false</bool>
   </property>
   <property name="windowTitle">
    <string>Tela Inicial</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/foto_klovis.ico</normaloff>../icons/foto_klovis.ico</iconset>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
@@ -193,7 +200,7 @@
       <x>10</x>
       <y>140</y>
       <width>281</width>
-      <height>21</height>
+      <height>23</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="layout_h_2">
@@ -212,6 +219,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="botao_login">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="text">
         <string>Login</string>
        </property>
