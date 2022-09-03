@@ -17,6 +17,3 @@ class TelaInicial(QWidget):
     def __init__(self) -> None:
         super().__init__()
         uic.loadUi(r"app_controle_gastos\frontend\layouts\tela_inicial.ui", self)
-
-
-CentralWindows().tela_inicial()
