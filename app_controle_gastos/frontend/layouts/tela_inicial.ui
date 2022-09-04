@@ -119,7 +119,7 @@
      <item>
       <layout class="QHBoxLayout" name="layout_h_4">
        <item>
-        <widget class="QLineEdit" name="linePasswd">
+        <widget class="QLineEdit" name="input_passwd">
          <property name="styleSheet">
           <string notr="true"/>
          </property>
