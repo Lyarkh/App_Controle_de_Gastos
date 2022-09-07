@@ -1,4 +1,4 @@
-from app_controle_gastos.frontend.tela_inicial import CentralWindows
+from app_controle_gastos.frontend.central_windows import CentralWindows
 
 
 class Main:
