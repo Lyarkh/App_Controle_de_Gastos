@@ -1,6 +1,6 @@
+from typing import Tuple
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from typing import Tuple
 
 from app_controle_gastos.tokens.database import KeysDB
 
@@ -11,7 +11,7 @@ class RegistroDB:
         keys = KeysDB()
         engine = create_engine(
                         f"mysql://{keys.USER}:{keys.PASSWORD}@{keys.HOST}:{keys.PORT}/{keys.DATABASE}",
-                        echo=False)
+                        echo=False)                      
         Session = sessionmaker(bind=engine)
         session = Session()
 
