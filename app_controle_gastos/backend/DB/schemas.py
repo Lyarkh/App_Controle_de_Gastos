@@ -6,11 +6,12 @@ from sqlalchemy import (
                 )
 from app_controle_gastos.backend.DB.connection import RegistroDB
 
+
 _, engine = RegistroDB.get_connection()
 Base = declarative_base()
 
 
-class Person(Base):
+class Person(Base):      # type: ignore
     __tablename__ = 'person'
 
     id = Column(Integer, primary_key=True)
@@ -25,7 +26,7 @@ class Person(Base):
     person_user = relationship('User', back_populates='person')
 
 
-class Address(Base):
+class Address(Base):      # type: ignore
     __tablename__ = 'address'
 
     id = Column(Integer, primary_key=True)
@@ -40,7 +41,8 @@ class Address(Base):
 
     address_person = relationship('Person', back_populates='address')
 
-class User(Base):
+
+class User(Base):      # type: ignore
     __tablename__ = 'user'
 
     id = Column(Integer, primary_key=True)
