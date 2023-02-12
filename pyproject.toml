@@ -11,6 +11,7 @@ PyQt5 = "^5.15.7"
 SQLAlchemy = "^1.4.40"
 mysql-connector-python = "^8.0.30"
 mysqlclient = "^2.1.1"
+streamlit = "^1.18.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
