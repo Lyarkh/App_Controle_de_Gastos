@@ -2,10 +2,11 @@ import streamlit as st
 
 st.header('Distribuição valor')
 
-
+# Valores iniciais para distribuição
 valor_total = st.number_input('Valor Total')
 choices = st.number_input('escolha a quantidade', 0)
 
+# Criação de cada um dos cartões e sliders para a distribuição e escolha da porcentagem
 distribuicoes = []
 max_value = 100
 for i in range(choices):
@@ -19,6 +20,7 @@ for i in range(choices):
     distribuicoes.append({title_cartao: value})
     max_value -= value
 
+# Calculando a distribuição
 valor_distribuido = 0
 for cart in distribuicoes:
     for i in cart.keys():
@@ -28,6 +30,8 @@ for cart in distribuicoes:
     cart['valor separado'] = round(valor_separado, 2)
     cart[i] = f'{cart[i]}%'
 
+
+# Escrevendo o valor distribuido para cada cartão
 with st.sidebar:
     st.write(f'Porcentagem total distribuida: {valor_distribuido}%')
     if valor_distribuido != 100:
