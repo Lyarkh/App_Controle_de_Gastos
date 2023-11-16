@@ -16,7 +16,7 @@ for i in range(choices):
     with col1:
         title_cartao = st.text_input('Nome cartao', f'Cartão {i}')
     with col2:
-        value = st.slider('escolha o valor:', min_value=0, max_value=max_value, key=f'k{i}')
+        value = st.number_input('Porcentagem',min_value=0, max_value=max_value, key=f' {i}')
     distribuicoes.append({title_cartao: value})
     max_value -= value
 
