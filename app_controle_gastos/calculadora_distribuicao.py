@@ -7,6 +7,16 @@ valor_total = st.number_input('Valor Total')
 choices = st.number_input('escolha a quantidade', 0)
 
 # Criação de cada um dos cartões e sliders para a distribuição e escolha da porcentagem
+
+cartoes_default = {
+    0: "BagBank (Itau)",
+    1: "DuoBank (C6)",
+    2: "HomeBank (Inter)",
+    3: "WishesBank (Next)",
+    4: "InvestBank (XP)",
+    5: "PigBank (NuBank)",
+}
+
 distribuicoes = []
 max_value = 100
 for i in range(choices):
@@ -14,7 +24,11 @@ for i in range(choices):
         break
     col1, col2 = st.columns(2)
     with col1:
-        title_cartao = st.text_input('Nome cartao', f'Cartão {i}')
+        if i in cartoes_default.keys():
+            title_cartao = st.text_input('Nome cartao', cartoes_default[i])
+        else:
+            title_cartao = st.text_input('Nome cartao', f'Cartão {i}')
+
     with col2:
         value = st.number_input('Porcentagem',min_value=0, max_value=max_value, key=f' {i}')
     distribuicoes.append({title_cartao: value})
