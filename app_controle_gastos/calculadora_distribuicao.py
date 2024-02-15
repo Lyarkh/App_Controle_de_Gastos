@@ -41,7 +41,11 @@ for cart in distribuicoes:
 # Escrevendo o valor distribuido para cada cartão
 with st.sidebar:
     st.write(f'Porcentagem total distribuida: {valor_distribuido}%')
-    if valor_distribuido != 100:
+    if valor_distribuido < 100:
         st.warning('Ainda falta porcentagem a ser distribuida')
+        st.warning(f'Porcentagem faltante: {100 - valor_distribuido}%')
+    if valor_distribuido > 100:
+        st.warning('Ultrapassou porcentagem máxima, favor redestribuir')
+
 
     st.write(distribuicoes)
