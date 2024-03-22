@@ -1,5 +1,5 @@
-import streamlit as st
 import constants
+import streamlit as st
 
 st.header('Distribuição valor')
 
@@ -18,12 +18,16 @@ for i in range(choices):
     col1, col2 = st.columns(2)
     with col1:
         if i in constants.cartoes_default.keys():
-            title_cartao = st.text_input('Nome cartao', constants.cartoes_default[i])
+            title_cartao = st.text_input(
+                'Nome cartao', constants.cartoes_default[i]
+            )
         else:
             title_cartao = st.text_input('Nome cartao', f'Cartão {i}')
 
     with col2:
-        value = st.number_input('Porcentagem',min_value=0, max_value=max_value, key=f' {i}')
+        value = st.number_input(
+            'Porcentagem', min_value=0, max_value=max_value, key=f' {i}'
+        )
     distribuicoes.append({title_cartao: value})
     max_value -= value
 
@@ -46,6 +50,5 @@ with st.sidebar:
         st.warning(f'Porcentagem faltante: {100 - valor_distribuido}%')
     if valor_distribuido > 100:
         st.warning('Ultrapassou porcentagem máxima, favor redestribuir')
-
 
     st.write(distribuicoes)
