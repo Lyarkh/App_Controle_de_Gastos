@@ -1,4 +1,4 @@
-import constants
+import app_controle_gastos.utils.constants as constants
 import streamlit as st
 
 st.header('Distribuição valor')
