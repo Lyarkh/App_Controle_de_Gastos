@@ -6,9 +6,7 @@ st.header('Distribuição valor')
 
 # Valores iniciais para distribuição
 valor_total = st.number_input('Valor Total')
-choices = st.number_input(
-    'escolha a quantidade', len(constants.cartoes_default.keys())
-)
+choices = st.number_input('escolha a quantidade', 6)
 
 # Criação de cada um dos cartões e sliders para a distribuição e escolha da porcentagem
 
