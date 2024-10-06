@@ -26,4 +26,4 @@ line_length = 79
 [tool.taskipy.tasks]
 lint = "blue --check --diff . && isort --check --diff ."
 lint_force = "blue  . && isort  ."
-run = "streamlit run app_controle_gastos\pages\01_calculadora_distribuicao.pyy"
+run = "streamlit run app_controle_gastos/pages/01_calculadora_distribuicao.pyy"
