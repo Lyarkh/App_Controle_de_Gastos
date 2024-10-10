@@ -27,7 +27,7 @@ for i in range(choices):
 
     with col2:
         value = st.number_input(
-            'Porcentagem', min_value=0, max_value=max_value, key=f' {i}'
+            'Porcentagem', min_value=0, max_value=100, key=f' {i}'
         )
     distribuicoes.append({title_cartao: value})
     max_value -= value
