@@ -12,10 +12,7 @@ choices = st.number_input('escolha a quantidade', 6)
 
 
 distribuicoes = []
-max_value = 100
 for i in range(choices):
-    if max_value == 0:
-        break
     col1, col2 = st.columns(2)
     with col1:
         if i in constants.cartoes_default.keys():
@@ -30,7 +27,6 @@ for i in range(choices):
             'Porcentagem', min_value=0, max_value=100, key=f' {i}'
         )
     distribuicoes.append({title_cartao: value})
-    max_value -= value
 
 # Calculando a distribuição
 valor_distribuido = 0
