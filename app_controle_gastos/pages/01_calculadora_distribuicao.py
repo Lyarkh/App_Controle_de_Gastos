@@ -24,11 +24,11 @@ for i in range(choices):
         col1, col2 = st.columns(2)
         with col1:
             value_num = st.number_input(
-                'Porcentagem', min_value=0, max_value=100, key=f'{i}a'
+                'Valor', min_value=0, max_value=100, key=f'{i}-a'
             )
         with col2:
             value_perc = st.number_input(
-                'Porcentagem', min_value=0, max_value=100, key=f'{i}b'
+                'Porcentagem', min_value=0, max_value=100, key=f'{i}-b'
             )
     distribuicoes.append({title_cartao: value_num if value_num else value_perc})
 
