@@ -21,10 +21,16 @@ for i in range(choices):
             title_cartao = st.text_input('Nome cartao', f'Cartão {i}')
 
     with col2:
-        value = st.number_input(
-            'Porcentagem', min_value=0, max_value=100, key=f' {i}'
-        )
-    distribuicoes.append({title_cartao: value})
+        col1, col2 = st.columns(2)
+        with col1:
+            value_num = st.number_input(
+                'Porcentagem', min_value=0, max_value=100, key=f' {i}'
+            )
+        with col2:
+            value_perc = st.number_input(
+                'Porcentagem', min_value=0, max_value=100, key=f' {i}'
+            )
+    distribuicoes.append({title_cartao: value_num if value_num else value_perc})
 
 # Calculando a distribuição
 valor_distribuido = 0
