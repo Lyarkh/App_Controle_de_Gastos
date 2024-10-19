@@ -11,6 +11,7 @@ choices = st.number_input('escolha a quantidade', 6)
 # Criação de cada um dos cartões e sliders para a distribuição e escolha da porcentagem
 distribuicoes = []
 for i in range(choices):
+    value_num = 0
     col1, col2 = st.columns(2)
     with col1:
         if i in constants.cartoes_default.keys():
@@ -21,15 +22,10 @@ for i in range(choices):
             title_cartao = st.text_input('Nome cartao', f'Cartão {i}')
 
     with col2:
-        col1, col2 = st.columns(2)
-        with col1:
-            value_num = st.number_input(
-                'Valor', min_value=0, max_value=100, key=f'{i}-a'
-            )
-        with col2:
-            value_perc = st.number_input(
-                'Porcentagem', min_value=0, max_value=100, key=f'{i}-b'
-            )
+
+        value_perc = st.number_input(
+            'Porcentagem', min_value=0, max_value=100, key=f'{i}-b'
+        )
     distribuicoes.append({title_cartao: value_num if value_num else value_perc})
 
 # Calculando a distribuição
